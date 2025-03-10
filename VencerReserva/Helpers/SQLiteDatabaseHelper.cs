@@ -25,10 +25,9 @@ namespace VencerReserva.Helpers
 
         public Task<List<Equipamento>> Update(Equipamento equipamento)
         {
-            string sql = "UPDATE Equipamento SET Nome=?, CheckIn=?, CheckOut=?, DiasReservdo=? WHERE Id=?";
+            string sql = "UPDATE Equipamento SET Nome=?, CheckIn=?, CheckOut=? WHERE Id=?";
 
-            return _conn.QueryAsync<Equipamento>(sql, equipamento.Nome, equipamento.CheckIn, equipamento.CheckOut, 
-                                                 equipamento.DiasReservado, equipamento.Id);
+            return _conn.QueryAsync<Equipamento>(sql, equipamento.Nome, equipamento.CheckIn, equipamento.CheckOut, equipamento.Id);
         }
 
         public Task<int> Delete(int id)

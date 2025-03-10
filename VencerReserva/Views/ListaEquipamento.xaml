@@ -23,19 +23,35 @@
         <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
 
             <ListView x:Name="lts_equipamento" ItemSelected="lts_equipamento_ItemSelected"
-                      IsPullToRefreshEnabled="True" Refreshing="lts_equipamento_Refreshing" />
+                      IsPullToRefreshEnabled="True" Refreshing="lts_equipamento_Refreshing">
 
-            <ListView.Header>
-                <Grid ColumnDefinitions="30, 100, 80, 50, 90" BackgroundColor="{StaticResource Gray100}">
-                    <Label Grid.Column="0" Text="ID" Padding="5" FontAttributes="Bold"/>
-                    <Label Grid.Column="1" Text="Equipamento" Padding="5" FontAttributes="Bold"/>
-                    <Label Grid.Column="2" Text="" Padding="5" FontAttributes="Bold"/>
-                    <Label Grid.Column="3" Text="ID" Padding="5" FontAttributes="Bold"/>
-                    <Label Grid.Column="4" Text="ID" Padding="5" FontAttributes="Bold"/>
-                    
-                </Grid>
-            </ListView.Header>
-            
+                <ListView.Header>
+                    <Grid ColumnDefinitions="*, *, *, *" BackgroundColor="{StaticResource Gray100}">
+                        <Label Grid.Column="0" Text="ID" Padding="5" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Text="Nome" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Text="Check-IN" FontAttributes="Bold"/>
+                        <Label Grid.Column="3" Text="Check-OUT" FontAttributes="Bold"/>
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
+                            </ViewCell.ContextActions>
+
+                            <Grid ColumnDefinitions="*, *, *, *" >
+                                <Label Grid.Column="0" Text="{Binding Id}" Padding="5" />
+                                <Label Grid.Column="1" Text="{Binding Nome}" />
+                                <Label Grid.Column="2" Text="{Binding CheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                                <Label Grid.Column="3" Text="{Binding CheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
         </Frame>
     </StackLayout>
 </ContentPage>

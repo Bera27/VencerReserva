@@ -7,13 +7,24 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked_Salvar" />
     </ContentPage.ToolbarItems>
-    
+
     <VerticalStackLayout Spacing="10" Padding="10">
+
         <Label Text="Nome do Equipamento:" />
         <Entry x:Name="txt_nome" />
 
-        <Label Text="Check-In:" />
-        <DatePicker x:Name="dtpck_ckeckIn" DateSelected="dtpck_checkIn_DateSelected"
-                    Format="dd/MM/yyyy" />
+        <Frame Padding="10">
+            <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand" >
+                <Label Text="Check-In:" />
+                <DatePicker x:Name="dtpck_checkIn" 
+                            DateSelected="dtpck_checkIn_DateSelected"
+                            Format="dd/MM/yyyy" />
+
+                <Label Text="Check-Out:" />
+                <DatePicker x:Name="dtpck_checkOut" 
+                            Format="dd/MM/yyyy" />
+            </HorizontalStackLayout>
+        </Frame>
+
     </VerticalStackLayout>
 </ContentPage>
