@@ -23,7 +23,8 @@ namespace VencerReserva.Models
         }
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
-
-        public int DiasReservado { get => CheckOut.Subtract(CheckIn).Days; }
+        public string Sala { get; set; }
+        public int Quantidade { get; set; }
+        public string Responsavel { get; set; }
     }
 }

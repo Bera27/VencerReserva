@@ -12,6 +12,15 @@
         <Label Text="Nome do Equipamento:" />
         <Entry x:Name="txt_nome" Text="{Binding Equipamento}" />
 
+        <Label Text="Respondavel:" />
+        <Entry x:Name="txt_responsavel" Text="{Binding Responsavel}" />
+
+        <Label Text="Sala:" />
+        <Entry x:Name="txt_sala" Text="{Binding Sala}" />
+
+        <Label Text="Quantidade:" />
+        <Entry x:Name="txt_quantidade" Keyboard="Numeric" Text="{Binding Quantidade}" />
+
         <Label Text="Check-IN:" />
         <DatePicker x:Name="dtpck_checkIn" DateSelected="dtpck_checkIn_DateSelected"
                     Format="dd/MM/yyyy" />

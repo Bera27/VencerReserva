@@ -24,7 +24,10 @@ public partial class NovoEquipamento : ContentPage
             {
                 Nome = txt_nome.Text,
                 CheckIn = dtpck_checkIn.Date,
-                CheckOut = dtpck_checkOut.Date
+                CheckOut = dtpck_checkOut.Date,
+                Responsavel = txt_responsavel.Text,
+                Sala = txt_sala.Text,
+                Quantidade = Convert.ToInt32(txt_quantidade.Text),
             };
 
             await App.Db.Insert(equipamento);
