@@ -21,11 +21,17 @@
         <Label Text="Quantidade:" />
         <Entry x:Name="txt_quantidade" Keyboard="Numeric" Text="{Binding Quantidade}" />
 
-        <Label Text="Check-IN:" />
-        <DatePicker x:Name="dtpck_checkIn" DateSelected="dtpck_checkIn_DateSelected"
+        <Frame Padding="10">
+            <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand" >
+                <Label Text="Check-In:" />
+                <DatePicker x:Name="dtpck_checkIn" 
+                    DateSelected="dtpck_checkIn_DateSelected"
                     Format="dd/MM/yyyy" />
 
-        <Label Text="Check-IN:" />
-        <DatePicker x:Name="dtpck_checkOut" Format="dd/MM/yyyy" />
+                <Label Text="Check-Out:" />
+                <DatePicker x:Name="dtpck_checkOut" 
+                    Format="dd/MM/yyyy" />
+            </HorizontalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>
