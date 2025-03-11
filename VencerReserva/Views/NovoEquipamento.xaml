@@ -13,6 +13,17 @@
         <Label Text="Nome do Equipamento:" />
         <Entry x:Name="txt_nome" />
 
+        <Label Text="Respondavel:" />
+        <Entry x:Name="txt_responsavel" />
+
+        <Label Text="Sala:" />
+        <Entry x:Name="txt_sala" />
+
+        <Label Text="Quantidade:" />
+        <Entry x:Name="txt_quantidade" Keyboard="Numeric" />
+        
+        
+
         <Frame Padding="10">
             <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand" >
                 <Label Text="Check-In:" />

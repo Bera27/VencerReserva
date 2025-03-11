@@ -12,11 +12,26 @@
         <Label Text="Nome do Equipamento:" />
         <Entry x:Name="txt_nome" Text="{Binding Equipamento}" />
 
-        <Label Text="Check-IN:" />
-        <DatePicker x:Name="dtpck_checkIn" DateSelected="dtpck_checkIn_DateSelected"
+        <Label Text="Respondavel:" />
+        <Entry x:Name="txt_responsavel" Text="{Binding Responsavel}" />
+
+        <Label Text="Sala:" />
+        <Entry x:Name="txt_sala" Text="{Binding Sala}" />
+
+        <Label Text="Quantidade:" />
+        <Entry x:Name="txt_quantidade" Keyboard="Numeric" Text="{Binding Quantidade}" />
+
+        <Frame Padding="10">
+            <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand" >
+                <Label Text="Check-In:" />
+                <DatePicker x:Name="dtpck_checkIn" 
+                    DateSelected="dtpck_checkIn_DateSelected"
                     Format="dd/MM/yyyy" />
 
-        <Label Text="Check-IN:" />
-        <DatePicker x:Name="dtpck_checkOut" Format="dd/MM/yyyy" />
+                <Label Text="Check-Out:" />
+                <DatePicker x:Name="dtpck_checkOut" 
+                    Format="dd/MM/yyyy" />
+            </HorizontalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>

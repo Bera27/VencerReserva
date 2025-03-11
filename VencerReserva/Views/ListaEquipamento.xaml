@@ -26,11 +26,14 @@
                       IsPullToRefreshEnabled="True" Refreshing="lts_equipamento_Refreshing">
 
                 <ListView.Header>
-                    <Grid ColumnDefinitions="*, *, *, *" BackgroundColor="{StaticResource Gray100}">
+                    <Grid ColumnDefinitions="*, *, *, *, *, *, *" BackgroundColor="{StaticResource Gray100}">
                         <Label Grid.Column="0" Text="ID" Padding="5" FontAttributes="Bold"/>
                         <Label Grid.Column="1" Text="Nome" FontAttributes="Bold"/>
-                        <Label Grid.Column="2" Text="Check-IN" FontAttributes="Bold"/>
-                        <Label Grid.Column="3" Text="Check-OUT" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Text="Responsavel" FontAttributes="Bold"/>
+                        <Label Grid.Column="3" Text="Sala" FontAttributes="Bold"/>
+                        <Label Grid.Column="4" Text="Quantidade" FontAttributes="Bold"/>
+                        <Label Grid.Column="5" Text="Check-IN" FontAttributes="Bold"/>
+                        <Label Grid.Column="6" Text="Check-OUT" FontAttributes="Bold"/>
                     </Grid>
                 </ListView.Header>
 
@@ -41,11 +44,14 @@
                                 <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
                             </ViewCell.ContextActions>
 
-                            <Grid ColumnDefinitions="*, *, *, *" >
+                            <Grid ColumnDefinitions="*, *, *, *, *, *, *" >
                                 <Label Grid.Column="0" Text="{Binding Id}" Padding="5" />
                                 <Label Grid.Column="1" Text="{Binding Nome}" />
-                                <Label Grid.Column="2" Text="{Binding CheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
-                                <Label Grid.Column="3" Text="{Binding CheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                                <Label Grid.Column="2" Text="{Binding Responsavel}" />
+                                <Label Grid.Column="3" Text="{Binding Sala}" />
+                                <Label Grid.Column="4" Text="{Binding Quantidade}" />
+                                <Label Grid.Column="5" Text="{Binding CheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                                <Label Grid.Column="6" Text="{Binding CheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
